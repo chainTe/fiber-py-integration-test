@@ -1,0 +1,2 @@
+rustc --edition=2021 runtime/auth_probe.rs --extern biscuit_auth="$CARGO_TARGET_DIR/debug/deps/libbiscuit_auth-d11d794cf92d9621.rlib" -L "dependency=$CARGO_TARGET_DIR/debug/deps" -o runtime/bin/auth-probe-optimized-dep
+runtime/bin/auth-probe-optimized-dep

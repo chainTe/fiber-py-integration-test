@@ -1,0 +1,6 @@
+Command (from tools/lsp-sdk-driver): python3 check_jsonl.py --binary ../../../runtime/adapter-target/debug/fiber-lsp-integration-sdk-driver
+Started (UTC): 2026-10-12T16:17:07.168481+00:00
+PASS: 7 JSONL commands across 2 actual process launches; identity/store preserved; injected payer preimage rejected before RPC; no RPC observed
+
+
+Exit code: 0

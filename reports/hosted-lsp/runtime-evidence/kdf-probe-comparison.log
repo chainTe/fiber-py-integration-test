@@ -1,0 +1,7 @@
+Optimized scrypt/salsa20 dependencies:
+log_n=17 r=8 p=1 elapsed_ms=9793 probe_debug_assertions=true
+synthetic_derived_key=972e8805edeeca0bc057c19c879ff848417bf7bccf92629d48c1f80b7ffcd7e0
+
+Original dev dependencies:
+log_n=17 r=8 p=1 elapsed_ms=57011 probe_debug_assertions=true
+synthetic_derived_key=972e8805edeeca0bc057c19c879ff848417bf7bccf92629d48c1f80b7ffcd7e0

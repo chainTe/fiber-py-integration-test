@@ -1,0 +1,108 @@
+name: Hosted LSP integration
+on:
+  pull_request:
+    paths:
+      - 'framework/lsp_*.py'
+      - 'test_cases/fiber/devnet/lsp/**'
+      - 'tools/lsp-sdk-driver/**'
+      - 'scripts/build_lsp.sh'
+      - 'scripts/check_lsp_scope.py'
+      - 'scripts/check_test_*.py'
+      - 'scripts/_lsp_check_loader.py'
+      - 'reports/hosted-lsp/baseline-mapping-issues.json'
+      - 'requirements-lsp.txt'
+      - 'reviews/lsp/**'
+      - '.github/workflows/hosted-lsp.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: hosted-lsp-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  hosted-lsp:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      CARGO_BUILD_JOBS: 4
+      CARGO_TARGET_DIR: ${{ github.workspace }}/target
+      LSP_FNN_BIN: ${{ github.workspace }}/target/debug/fnn
+      LSP_SDK_DRIVER_BIN: ${{ github.workspace }}/target/debug/fiber-lsp-integration-sdk-driver
+      LSP_PRODUCT_DIR: ${{ github.workspace }}/fiber-lsp
+      LSP_CKB_BIN: ${{ github.workspace }}/ckb/ckb
+      LSP_CKB_CLI_BIN: ${{ github.workspace }}/ckb/ckb-cli
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: integration
+      - uses: actions/checkout@v4
+        with:
+          repository: chenyukang/fiber
+          ref: 8db6a1175cc94b6f9386953fbd3e3ebbed2ff3f8
+          path: fiber-lsp
+      - uses: actions/checkout@v4
+        with:
+          repository: nervosnetwork/ai-test-agent
+          ref: 6768441f75ced58132d32f0d0914638b403b4edd
+          path: ai-test-agent
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.95.0
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            fiber-lsp -> ../target
+            integration/tools/lsp-sdk-driver -> ../../../target
+      - name: Install official build and Python dependencies
+        working-directory: integration
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang libclang-dev cmake libssl-dev pkg-config
+          python -m pip install -r requirements-lsp.txt black==26.10.1
+      - name: Install official CKB devnet runtime
+        run: |
+          set -euo pipefail
+          url=https://github.com/nervosnetwork/ckb/releases/download/v0.202.0/ckb_v0.202.0_x86_64-unknown-linux-gnu-portable.tar.gz
+          curl --fail --location --retry 2 "$url" -o ckb.tar.gz
+          echo "022b13461d081f872ec2665510861d88ecc3f5c11d0aae5a75d646251add23ec  ckb.tar.gz" | sha256sum --check
+          mkdir ckb
+          tar -xzf ckb.tar.gz --strip-components=1 -C ckb
+          ckb/ckb --version
+          ckb/ckb-cli --version
+      - name: Validate all changed cases and disclose baseline orphan mappings
+        working-directory: integration
+        run: python scripts/check_lsp_scope.py
+      - name: Check integration Python formatting and syntax
+        working-directory: integration
+        run: |
+          python -m black --check framework/lsp_devnet.py framework/lsp_signer.py test_cases/fiber/devnet/lsp tools/lsp-sdk-driver/check_jsonl.py scripts/_lsp_check_loader.py scripts/check_lsp_scope.py scripts/check_test_map.py scripts/check_test_design.py
+          python -m compileall -q framework/lsp_devnet.py framework/lsp_signer.py test_cases/fiber/devnet/lsp tools/lsp-sdk-driver/check_jsonl.py scripts/_lsp_check_loader.py scripts/check_lsp_scope.py scripts/check_test_map.py scripts/check_test_design.py
+      - name: Build pinned product and SDK driver
+        working-directory: integration
+        run: bash scripts/build_lsp.sh
+      - name: Validate production-SDK adapter
+        working-directory: integration
+        run: |
+          cargo +1.95.0 fmt --manifest-path tools/lsp-sdk-driver/Cargo.toml -- --check
+          cargo +1.95.0 clippy --locked --all-targets --no-deps --manifest-path tools/lsp-sdk-driver/Cargo.toml -- -D warnings
+          cargo +1.95.0 test --locked --manifest-path tools/lsp-sdk-driver/Cargo.toml
+          python tools/lsp-sdk-driver/check_jsonl.py --binary "$LSP_SDK_DRIVER_BIN"
+      - name: Run genuine process and chain integration
+        working-directory: integration
+        run: |
+          set -euo pipefail
+          mkdir -p reports/hosted-lsp
+          python -m pytest -o addopts= -vv --tb=short --junitxml=reports/hosted-lsp/junit.xml test_cases/fiber/devnet/lsp 2>&1 | tee reports/hosted-lsp/pytest.log
+      - name: Upload test results only (no wallet stores)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hosted-lsp-results
+          path: |
+            integration/reports/hosted-lsp/junit.xml
+            integration/reports/hosted-lsp/pytest.log
+          if-no-files-found: warn

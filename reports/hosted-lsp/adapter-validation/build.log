@@ -1,0 +1,10 @@
+Command (from tools/lsp-sdk-driver): bash build.sh --offline
+Started (UTC): 2026-10-12T16:16:35.124462+00:00
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling fiber-lsp-integration-sdk-driver v0.1.0 (<workspace>/fiber-py-integration-test/tools/lsp-sdk-driver)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 31.71s
+
+
+Exit code: 0

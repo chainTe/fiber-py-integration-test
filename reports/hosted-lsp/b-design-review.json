@@ -1,0 +1,351 @@
+{
+  "schema_version": "2.0",
+  "scope": "hosted-lsp",
+  "input_fingerprint": "5789735d65075fb73ce2e50177d078d5d8ec734d753c2405e796b52bea10cfd5",
+  "reviewer": {
+    "session": "independent-design-review-first",
+    "model": "unavailable (not attested)",
+    "isolation": "isolation_unverified"
+  },
+  "acknowledgements": [
+    {
+      "case_id": "LSP-001",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-002",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-003",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-004",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-005",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-006",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-007",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-008",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-009",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-010",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-011",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-012",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-013",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-014",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-015",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-016",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-017",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-018",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-019",
+      "spec_refs": [
+        "SPEC-05"
+      ]
+    },
+    {
+      "case_id": "LSP-020",
+      "spec_refs": [
+        "SPEC-05"
+      ]
+    },
+    {
+      "case_id": "LSP-021",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-022",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-023",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-024",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-025",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-026",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-027",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-028",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-029",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-030",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-031",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-032",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-033",
+      "spec_refs": [
+        "SPEC-08"
+      ]
+    },
+    {
+      "case_id": "LSP-034",
+      "spec_refs": [
+        "SPEC-08"
+      ]
+    },
+    {
+      "case_id": "LSP-035",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-036",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-037",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-038",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-039",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-040",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-041",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-042",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-043",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-044",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-045",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-046",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-047",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-048",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F-01",
+      "location": "reviews/lsp/hosted-lsp.md:SPEC-07, LSP-029..LSP-033, LSP-038, implementation steps 2-3",
+      "basis": "The global setup promises an independent production-SDK signer, but LSP-029/030/031 and the successful continuation in032 are described as observation-backed success without declaring their signer mode. At pinned product head, fiber-lsp-sdk/src/commitment.rs:504-523 requires a locally approved fulfillment/cancellation before signing a removed outgoing TLC; fiber-lib/src/fiber/payment.rs:636-643 exposes fulfillment preimages only from successful attempts. rpc/channel.rs:565-583 does not expose a removed-TLC preimage. The cited lsp/tests/integration.rs:2296-2535 uses internally signed tenant nodes, while fiber/tests/external_signer_restart.rs:312-395 explicitly preauthorizes fixture-known preimages. Those tests do not establish an externally signed invoice-payment success path with only the payer wallet’s own knowledge. This is the same unresolved boundary already acknowledged by LSP-033, not an independently confirmed product defect.",
+      "suggestion": "Make the signer model explicit in every affected setup and Spec. A genuine internal-signer lifecycle/routing baseline can use the supported operator Public T open_channel to the active tenant pubkey (tests/bruno/e2e/lsp/05-open-hosted-private-channel.bru); label its coverage accordingly. Keep the external-signer outbound regression and its shared blockers explicit, with bounded diagnostics and no receiver-preimage handoff. For038 choose an inbound hold-invoice or payer-owned keysend scenario with an explicit legitimate preimage source, or report the same external-outbound blocker rather than silently supplying a preimage.",
+      "impact": "High: otherwise many nominal happy paths can deadlock at the same prerequisite, or pass only because the test driver bypasses the wallet knowledge boundary. It also overstates external-signer coverage when internal-signer fixtures are used."
+    },
+    {
+      "finding_id": "F-02",
+      "location": "reviews/lsp/hosted-lsp.md:LSP-047 / SPEC-11",
+      "basis": "The row says force-close and then safely release the hold preimage but does not order release relative to commitment confirmation. Production fiber-lsp-sdk/src/signer.rs:829-854 requires ChainVerifier.live_cell(binding.funding_outpoint) before authorizing any release, including the Watchtower target. After the force-close commitment is confirmed that funding cell has been spent, so possession of a live commitment output is insufficient. The cited Bruno preimage flow releases in step18 and only mines the commitment in step20.",
+      "suggestion": "State and implement a deterministic sequence: obtain SDK-verified recoverable inbound commitment evidence, authorize and transmit the preimage while the funding cell is still live, then confirm the force-close commitment and require a real key_purpose=Tlc submission and the resulting spend/payout. If release remains after the shutdown RPC, disable automatic mining and assert funding is live immediately before release. Treat post-confirmation release rejection as a separate negative boundary rather than faking chain evidence.",
+      "impact": "High feasibility issue: a natural implementation that mines first cannot satisfy this row through the current production SDK; a fake ChainVerifier would invalidate the claimed process/chain integration coverage."
+    },
+    {
+      "finding_id": "F-03",
+      "location": "reviews/lsp/hosted-lsp.md:SPEC-04, LSP-013..LSP-018 and SPEC-10/LSP-040",
+      "basis": "LSP-018 mutates an already signed funding transaction sent to the node. Its expected rejection is implemented by fiber-lib/src/fiber/channel.rs:3967-4004, particularly the raw-data equality check. It does not exercise the distinct wallet-side protection against an LSP returning altered opening terms. fiber-lsp-sdk/src/opening.rs:126-192 checks approved local amount, asset, contract, delay, fee, reserve and derived channel ID, and session.rs:240-353 establishes the persistent opening boundary. LSP-013 only supplies a valid response, while040 names commitment/signing-status mutations rather than opening-result mutations.",
+      "suggestion": "Add a separately identified case, or an explicit opening-response branch of the existing SDK validation case: intercept the genuine open_tenant_channel response and alter one independently wallet-approved term (at least commitment fee/delay or local amount), then a funding output/contract or channel ID. Invoke the production opening API and require rejection before wallet funding signing/submission and before a new verified binding; retain the already persisted opening intent for a clean exact retry. Restore the genuine response and show the same channel can complete.",
+      "impact": "High coverage gap: server-side signed-transaction rejection can pass even if the wallet blindly accepts a malicious opening proposal and signs it. The stated SDK opening-verification invariant lacks a negative process-level oracle."
+    },
+    {
+      "finding_id": "F-04",
+      "location": "reviews/lsp/hosted-lsp.md:SPEC-11, LSP-043..LSP-047",
+      "basis": "The chain cases establish successful withdrawal and RPC handling of invalid signatures, but none gives the production SDK a syntactically valid hostile withdrawal request or invalidates chain state between prepare and confirm. Those are distinct protections: fiber-lsp-sdk/src/onchain.rs:61-87 validates actual ancestry/maturity/live inputs; :243-265 checks independently approved sponsor inputs; :331-365 rejects unapproved payout destinations and fee mismatches. signer.rs:1030-1060 rechecks chain evidence at signing time. LSP-044 tests the node’s signature submission boundary, not these wallet checks; LSP-040 is restricted to commitment materials.",
+      "suggestion": "Add an explicit on-chain SDK negative branch using the existing local response proxy and a genuine pending Watchtower request: substitute a different payout script or an unapproved sponsor input/fee, require no signature submission and unchanged signer snapshot, then restore valid material and settle. Also retain a prepared request, spend its input through a valid chain transaction, and verify confirm refuses the now-spent input using the independent CKB RPC. Use a separate fixture for the consumed-input branch; do not expect the stale transaction to become valid again.",
+      "impact": "High coverage gap: a regression accepting attacker-chosen destinations or cached stale chain evidence could leave every current Watchtower positive and RPC signature-rejection case green."
+    },
+    {
+      "finding_id": "F-05",
+      "location": "reviews/lsp/hosted-lsp.md:SPEC-02, LSP-006..LSP-008, LSP-045",
+      "basis": "SPEC-02 specifically claims routing identity comes from the authenticated authority tenant fact. Current rows cover missing/broken tokens and using another tenant’s IDs, but no token has a valid appended attenuation block with a conflicting tenant or node fact. fiber-lib/src/rpc/biscuit.rs:335-350 explicitly documents why appended facts must not select tenant identity; :305-331 applies the corresponding watchtower namespace boundary. Existing Rust tests at biscuit.rs:514-529 and tenant.rs:140-149 check this in-process only.",
+      "suggestion": "Extend the auth/isolation case with valid Biscuit attenuation of a real issued token, requiring no server signing-key knowledge: append tenant(B) and node(B) or node(local) facts to tenant A’s token and verify ordinary data-plane requests remain scoped to A and cannot read/change B or host watchtower state. Include an owner success control and assert auth/routing behavior rather than accepting any unrelated JSON-RPC parameter error. If an operator-token attenuation control is included, its appended tenant fact must not change its public-node routing.",
+      "impact": "High: swapped resource IDs do not catch a middleware regression that trusts an attacker-supplied attenuation identity. The central authority-only promise in SPEC-02 otherwise has no matching behavioral test."
+    },
+    {
+      "finding_id": "F-06",
+      "location": "reviews/lsp/hosted-lsp.md:LSP-011 versus LSP-037 / SPEC-03 and SPEC-09",
+      "basis": "LSP-011 broadly treats ongoing channel negotiation as busy, while037 deliberately evicts an idle pending-signature channel. The implementation does not classify all non-ChannelReady channels as busy: fiber-lib/src/fiber/network.rs:7038-7051 counts inflight payment actors, all TLCs and specific pending-operation collections. lsp/tests/signer_isolation.rs:606-660 successfully evicts an opening channel that has returned its unsigned funding result and awaits a signature. Therefore a not-ready channel status alone is not a valid busy-state setup or oracle.",
+      "suggestion": "Name the exact externally inducible busy negotiation state for011 and keep it separate from037. For example configure auto-accept above the public operator’s valid opening amount, leave a Public T-to-tenant opening awaiting acceptance, assert the pending operation makes eviction fail, then resolve/cancel the opening and prove eviction becomes possible. Alternatively supply another demonstrably persistent pending-operation fixture. Do not use a paused signature after the unsigned-funding response as proof of busy negotiation;037 should explicitly use the source-supported idle opening-signature checkpoint.",
+      "impact": "Medium: otherwise011 and037 can make contradictory assertions about the same observable opening state, producing false product failures or a race that never exercises the intended eviction guard."
+    },
+    {
+      "finding_id": "F-07",
+      "location": "reviews/lsp/hosted-lsp.md:LSP-024..LSP-026, especially the TLC-safety subcase of025",
+      "basis": "The deadline case names the minimum rule but does not specify the real RPC settings or independent oracle needed to ensure the TLC-safety branch actually wins. The safety margin is a fixed 30000ms (lsp/delivery.rs:13). network.rs:5103-5126 derives max_outgoing_tlc_expiry from the upstream TLC expiry minus that incoming channel’s forwarding delta, and delivery.rs:459-471 subtracts the requested downstream delta and the safety margin again before taking min(buffer cap, invoice expiry). The cited short-deadline source tests construct internal TrampolineForwardingRequest values directly, e.g. lsp/tests/mod.rs:2023-2038; simply shortening a public send_payment expiry can instead fail before any hosted delivery is accepted.",
+      "suggestion": "Document the concrete per-fixture channel forwarding delta, invoice/final delta, payer expiry budget, buffer cap and invoice lifetime. In each variant first prove a real Deferred delivery exists, then independently derive the expected winning deadline from the actual upstream TLC plus known requested deltas (allow only measured transport/clock tolerance), and assert that deadline is strictly earlier than the two competing caps. For026 choose a buffer deadline shorter than the still-valid invoice/TLC/SDK recovery window and observe InFlight before crossing it. Report admission failure or failure at a different cap as setup failure, not coverage of the intended deadline branch.",
+      "impact": "Medium: without these controls the tests can pass on the wrong expiry source, or reject immediately without testing deferred-delivery expiration or the InFlight exception."
+    }
+  ]
+}

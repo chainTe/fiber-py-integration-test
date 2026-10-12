@@ -1,0 +1,82 @@
+{
+  "scope": "native pytest selector-level execution; not framework per-case acceptance",
+  "command": ".venv/bin/python -m pytest -o addopts= -vv --tb=short --basetemp=../runtime/test-runs/final-serial-v2 --junitxml=reports/hosted-lsp/final-serial.xml test_cases/fiber/devnet/lsp",
+  "cwd": "fiber-py-integration-test repository root",
+  "environment_keys": [
+    "LSP_FNN_BIN",
+    "LSP_SDK_DRIVER_BIN",
+    "LSP_PRODUCT_DIR",
+    "LSP_CKB_BIN",
+    "LSP_CKB_CLI_BIN"
+  ],
+  "started_utc": "2026-10-12T17:10:39Z",
+  "ended_utc": "2026-10-12T17:44:03Z",
+  "pytest_duration_seconds": 1995.76,
+  "exit_code": 1,
+  "summary": {
+    "collected": 72,
+    "passed": 69,
+    "failed": 3,
+    "errors": 0,
+    "skipped": 0
+  },
+  "modules": {
+    "test_payments": {
+      "passed": 18,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "test_registry": {
+      "passed": 14,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "test_signing": {
+      "passed": 28,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "test_watchtower": {
+      "passed": 9,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "failed_selectors": [
+    {
+      "selector": "test_cases/fiber/devnet/lsp/test_payments.py::test_rejected_missing_expiry_invoice_leaves_no_partial_write",
+      "outcome": "failed",
+      "message": "Rejected hosted invoice persisted: status=Open, payment_hash=0x8ad3617ed0b422acc4cf17da6bfab32c1f8c673ddf8d38d49db039feba62df6f, expiry_time=absent"
+    },
+    {
+      "selector": "test_cases/fiber/devnet/lsp/test_signing.py::test_external_hosted_payer_obtains_fulfillment_only_from_own_rpc",
+      "outcome": "failed",
+      "message": "AssertionError: {'approved_debit': 1005000, 'authorized_from_payer_rpc': False, 'case_id': 'LSP-033', 'payer_rpc_preimage_present': False, ...}\nassert 'Inflight' == 'Success'\n  - Success\n  + Inflight"
+    },
+    {
+      "selector": "test_cases/fiber/devnet/lsp/test_watchtower.py::test_sdk_rejects_hostile_watchtower_transaction_before_signing[fee]",
+      "outcome": "failed",
+      "message": "AssertionError: Timed out after 90s waiting for SDK-accepted Watchtower signatures and confirmed settlement; last=False"
+    }
+  ],
+  "source_fingerprint": "b5e62d74770939ad5a75644e58508160ca1ad4992326444579221a9b4c3de724",
+  "post_run_25_source_hashes_match": true,
+  "artifacts_sha256": {
+    "runtime-evidence/final-pytest.log": "763e28a07143248ca0620c0ac37f6b5337fe7da7f03316ebad9920fbe88f6cfc",
+    "runtime-evidence/final-junit.xml": "0c0d6c206c36702f62bfe4d3b5ffb8ebccad0a8a36a3d5fe585b2087ed53d03a",
+    "runtime-evidence/final-lsp-033.json": "2601f39e09ccaa856b61c73743d47599721081217596924c727f74edc520d89e"
+  },
+  "timestamp_note": "JUnit timestamp is naive runner-local time; UTC provenance above was recorded with date -u.",
+  "separate_unchanged_comparison": {
+    "selector": "test_cases/fiber/devnet/lsp/test_watchtower.py::test_sdk_rejects_hostile_watchtower_transaction_before_signing[fee]",
+    "passed": 1,
+    "failed": 0,
+    "exit_code": 0,
+    "duration_seconds": 36.13,
+    "relationship": "Does not replace the primary69/3 run; exposes timing/request-order dependence."
+  }
+}

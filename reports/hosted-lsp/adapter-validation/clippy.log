@@ -1,0 +1,6 @@
+Command (from tools/lsp-sdk-driver): cargo +1.95.0 clippy --locked --offline --all-targets --no-deps --manifest-path Cargo.toml -- -D warnings
+Started (UTC): 2026-10-12T16:15:47.657447+00:00
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.68s
+
+
+Exit code: 0

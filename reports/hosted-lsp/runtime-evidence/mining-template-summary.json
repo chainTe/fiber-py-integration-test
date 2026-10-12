@@ -1,0 +1,11 @@
+{
+  "kind": "real CKB-only helper validation; not LSP integration coverage",
+  "status": "passed",
+  "canonical_height": 320,
+  "exact_template_submissions": 300,
+  "stale_templates_waited_out": 5,
+  "epoch_before": "0xa000600001b",
+  "epoch_after": "0xa000600001d",
+  "generate_epochs_return": "0xa000600001d",
+  "seconds": 10.659
+}

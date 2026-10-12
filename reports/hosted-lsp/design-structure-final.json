@@ -1,0 +1,486 @@
+{
+  "schema_version": "2.0",
+  "cases": {
+    "LSP-001": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 190,
+      "priority": "P0",
+      "expected": "生成由 RootSigner 派生的 tenant_id；首次注册为 cold；租户 RPC 可激活且仅访问自己的命名空间"
+    },
+    "LSP-002": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 191,
+      "priority": "P0",
+      "expected": "旧证明失败且租户计数不变；最新证明仅注册一次；再次重放失败"
+    },
+    "LSP-003": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 192,
+      "priority": "P0",
+      "expected": "非法请求失败，不新增租户、不消费有效 challenge；正确证明仍可成功"
+    },
+    "LSP-004": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 193,
+      "priority": "P0",
+      "expected": "返回可用新 token；tenant_id、invoice_pubkey、created_at、通道绑定及发票保持；注册计数不增加"
+    },
+    "LSP-005": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 194,
+      "priority": "P1",
+      "expected": "未消费 challenge 在重启后可用；已消费证明仍失败，身份与计数保持"
+    },
+    "LSP-006": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 195,
+      "priority": "P0",
+      "expected": "全部拒绝；注册数、通道及发票状态不变；合法 tenant 方法仍可用"
+    },
+    "LSP-007": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 196,
+      "priority": "P0",
+      "expected": "跨租户 get/update/shutdown/settle/signature 操作拒绝或只返回本租户结果；B 状态不变"
+    },
+    "LSP-008": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 197,
+      "priority": "P0",
+      "expected": "operator 观察公共节点，A/B 只观察各自通道/发票/付款；列表无串租户条目"
+    },
+    "LSP-009": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 198,
+      "priority": "P0",
+      "expected": "active_tenants 只增加一次；驱逐为 cold；重新激活同一身份和通道，无重复余额"
+    },
+    "LSP-010": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 199,
+      "priority": "P1",
+      "expected": "容量满时 B 激活失败，不隐式驱逐 A；释放槽位后 B 成功"
+    },
+    "LSP-011": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 200,
+      "priority": "P0",
+      "expected": "拒绝驱逐且工作继续；完成后才可驱逐；分别设置各类忙碌状态"
+    },
+    "LSP-012": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 201,
+      "priority": "P1",
+      "expected": "operator 查询不激活；tenant RPC 按当前实现激活；观测计数明确区分"
+    },
+    "LSP-013": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 202,
+      "priority": "P0",
+      "expected": "SDK 验证返回条款/链上输入；双方进入 ChannelReady，绑定唯一 private_channel_id，资金输出匹配约定"
+    },
+    "LSP-014": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 203,
+      "priority": "P0",
+      "expected": "均失败，不产生通道/链上资金交易；同一钱包正确请求随后可成功"
+    },
+    "LSP-015": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 204,
+      "priority": "P0",
+      "expected": "返回同一 channel_id 与冻结的 unsigned funding transaction；只有一个开通和资金输出"
+    },
+    "LSP-016": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 205,
+      "priority": "P0",
+      "expected": "拒绝不同开通及第二通道；原条款和资金状态不变"
+    },
+    "LSP-017": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 206,
+      "priority": "P1",
+      "expected": "恢复同一通道及资金交易，不生成新意图；可进入 ChannelReady"
+    },
+    "LSP-018": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 207,
+      "priority": "P0",
+      "expected": "坏交易拒绝且没有错误链上输出；合法原交易仍可完成开通"
+    },
+    "LSP-019": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 208,
+      "priority": "P0",
+      "expected": "发票属于 tenant invoice_pubkey、提示 public LSP；金额/expiry/hash 保持；operator/tenant 查询一致"
+    },
+    "LSP-020": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 209,
+      "priority": "P1",
+      "expected": "MPP 请求拒绝且无发票残留；合法重试成功"
+    },
+    "LSP-021": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 210,
+      "priority": "P0",
+      "expected": "payer Success、delivery succeeded、invoice Paid；金额/费用与余额变化对应一次，无残留 TLC"
+    },
+    "LSP-022": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 211,
+      "priority": "P0",
+      "expected": "激活前付款未成功且状态 durable deferred；激活后 payer Success、delivery succeeded、invoice Paid，仅结算一次"
+    },
+    "LSP-023": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 212,
+      "priority": "P0",
+      "expected": "delivery 身份/原截止保持，不重新延长缓冲；最终双方成功且仅结算一次"
+    },
+    "LSP-024": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 213,
+      "priority": "P0",
+      "expected": "delivery failed，payer 终态失败、无 receiver Paid、无待处理 TLC；激活不复活已失败交付"
+    },
+    "LSP-025": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 214,
+      "priority": "P1",
+      "expected": "buffer_deadline 等于 min(created_at+cap,invoice截止,upstream_expiry−incoming_delta−downstream_delta−30000ms)；证明目标项严格最小；短 invoice 变体实等失败，长 safety 变体验证截止后立即安全解除，不伪称等待数小时"
+    },
+    "LSP-026": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 215,
+      "priority": "P1",
+      "expected": "不因离线缓冲期限已过而错误终结已派发支付；合法 settle 后完整成功"
+    },
+    "LSP-027": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 216,
+      "priority": "P0",
+      "expected": "第二笔失败且不抢占/结算第一笔；释放合法预像后第一笔独立成功且收款仅一次"
+    },
+    "LSP-028": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 217,
+      "priority": "P1",
+      "expected": "超额请求失败且不污染已有交付；未触及全局时 B 不受 A 配额影响；终态释放额度后可再付款"
+    },
+    "LSP-029": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 218,
+      "priority": "P0",
+      "expected": "payer Success、receiver Paid；payment hash/preimage 与金额匹配；仅 A 可查询该付款"
+    },
+    "LSP-030": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 219,
+      "priority": "P0",
+      "expected": "观察多个实际 attempt/通道分片共同成功、接收一次总额；不是仅设置 allow_mpp 而走单路径"
+    },
+    "LSP-031": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 220,
+      "priority": "P1",
+      "expected": "两服务各自租户/交付命名空间独立，最终 payer Success/receiver Paid，资金变化一致"
+    },
+    "LSP-032": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 221,
+      "priority": "P1",
+      "expected": "首笔最终失败、无收款/残留 TLC、余额不错误扣除；后续合法付款成功"
+    },
+    "LSP-033": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 222,
+      "priority": "P0",
+      "expected": "代理选择的目标不变量：应在有界时间内 payer Success、receiver Paid、RPC 返回匹配预像、无待签请求/TLC，余额一致；receiver Paid/payer Inflight 必须失败"
+    },
+    "LSP-034": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 223,
+      "priority": "P1",
+      "expected": "代理选择的目标不变量：失败请求不留下 invoice/registry 残留，合法同 hash 重试可成功；当前源码可能先写 invoice 后拒绝，必须如实报告"
+    },
+    "LSP-035": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 224,
+      "priority": "P0",
+      "expected": "每次拒绝保持 pending request；正确提交 Applied；开通/付款最终可继续"
+    },
+    "LSP-036": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 225,
+      "priority": "P0",
+      "expected": "精确重试 AlreadyApplied，不重复状态推进；改写 receipt 拒绝；不要求任意历史签名永久可重放"
+    },
+    "LSP-037": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 226,
+      "priority": "P1",
+      "expected": "冷查询保留完整请求且不激活；提交时恢复执行；最终通道/付款完成"
+    },
+    "LSP-038": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 227,
+      "priority": "P0",
+      "expected": "每种重启保留对应请求与身份/绑定；双方付款终态和余额一致；不把 node 与 signer 重启混为一个证据"
+    },
+    "LSP-039": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 228,
+      "priority": "P1",
+      "expected": "Manual 需确认；Auto 只在 version>1 且无出站变更时允许；开通/出站仍需确认；签名必须对应预先钱包意图"
+    },
+    "LSP-040": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 229,
+      "priority": "P0",
+      "expected": "Manual/Auto 均拒绝强制验证失败；无提交、signer snapshot 不变；恢复原始合法材料后可继续"
+    },
+    "LSP-041": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 230,
+      "priority": "P0",
+      "expected": "前两次 SDK 拒绝且代理确认无 settle_invoice/create_preimage 传输；合法释放后完整 Success/Paid"
+    },
+    "LSP-042": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 231,
+      "priority": "P0",
+      "expected": "关闭实际上链；输出地址、余额和费用匹配授权；Closed 状态，无未解决 TLC"
+    },
+    "LSP-043": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 232,
+      "priority": "P0",
+      "expected": "签名前 commitment output 仍 live 且有 Settlement 待签请求；恢复后有 SDK 接受签名记录及确认 spend，正确 payout"
+    },
+    "LSP-044": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 233,
+      "priority": "P0",
+      "expected": "错误不改 pending/store；合法 Applied、精确 AlreadyApplied、改写拒绝；多轮扫描/重启后仍能链上完成"
+    },
+    "LSP-045": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 234,
+      "priority": "P0",
+      "expected": "跨租户请求拒绝，owner 请求保持；tenant secret-key 注册拒绝，public-key-only 路径可用"
+    },
+    "LSP-046": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 235,
+      "priority": "P0",
+      "expected": "tenant 冷状态及 channel binding 可观测；watchtower 仍生成/应用签名并正确结算"
+    },
+    "LSP-047": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 236,
+      "priority": "P0",
+      "expected": "必须出现 key_purpose=Tlc 的 SDK 提交；确认的 commitment/TLC spend 与合法收款匹配"
+    },
+    "LSP-048": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 237,
+      "priority": "P0",
+      "expected": "先确认旧 commitment，再验证 revocation spend 消耗输出且支付正确惩罚地址；缺少证据不得盲签"
+    },
+    "LSP-049": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 238,
+      "priority": "P0",
+      "expected": "请求仍依 authority 块路由；A 可以正常读 A 但不能读改 B/host watchtower；operator 仍访问公共节点"
+    },
+    "LSP-050": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 239,
+      "priority": "P0",
+      "expected": "SDK 拒绝且无 funding 签名提交/verified binding；保留 opening intent，真实同意图重试可完成同一通道"
+    },
+    "LSP-051": {
+      "review": "reviews/lsp/hosted-lsp.md",
+      "line": 240,
+      "priority": "P0",
+      "expected": "SDK 拒绝恶意/过时证据且无签名提交；拒绝不改 signer snapshot；恢复合法材料的独立变体可结算，已花费输入不要求复活"
+    }
+  },
+  "spec_refs": {
+    "LSP-001": [
+      "reviews/lsp/hosted-lsp.md#spec-01"
+    ],
+    "LSP-002": [
+      "reviews/lsp/hosted-lsp.md#spec-01"
+    ],
+    "LSP-003": [
+      "reviews/lsp/hosted-lsp.md#spec-01"
+    ],
+    "LSP-004": [
+      "reviews/lsp/hosted-lsp.md#spec-01"
+    ],
+    "LSP-005": [
+      "reviews/lsp/hosted-lsp.md#spec-01"
+    ],
+    "LSP-006": [
+      "reviews/lsp/hosted-lsp.md#spec-02"
+    ],
+    "LSP-007": [
+      "reviews/lsp/hosted-lsp.md#spec-02"
+    ],
+    "LSP-008": [
+      "reviews/lsp/hosted-lsp.md#spec-02"
+    ],
+    "LSP-009": [
+      "reviews/lsp/hosted-lsp.md#spec-03"
+    ],
+    "LSP-010": [
+      "reviews/lsp/hosted-lsp.md#spec-03"
+    ],
+    "LSP-011": [
+      "reviews/lsp/hosted-lsp.md#spec-03"
+    ],
+    "LSP-012": [
+      "reviews/lsp/hosted-lsp.md#spec-03"
+    ],
+    "LSP-013": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-014": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-015": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-016": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-017": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-018": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-019": [
+      "reviews/lsp/hosted-lsp.md#spec-05"
+    ],
+    "LSP-020": [
+      "reviews/lsp/hosted-lsp.md#spec-05"
+    ],
+    "LSP-021": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-022": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-023": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-024": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-025": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-026": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-027": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-028": [
+      "reviews/lsp/hosted-lsp.md#spec-06"
+    ],
+    "LSP-029": [
+      "reviews/lsp/hosted-lsp.md#spec-07"
+    ],
+    "LSP-030": [
+      "reviews/lsp/hosted-lsp.md#spec-07"
+    ],
+    "LSP-031": [
+      "reviews/lsp/hosted-lsp.md#spec-07"
+    ],
+    "LSP-032": [
+      "reviews/lsp/hosted-lsp.md#spec-07"
+    ],
+    "LSP-033": [
+      "reviews/lsp/hosted-lsp.md#spec-08"
+    ],
+    "LSP-034": [
+      "reviews/lsp/hosted-lsp.md#spec-08"
+    ],
+    "LSP-035": [
+      "reviews/lsp/hosted-lsp.md#spec-09"
+    ],
+    "LSP-036": [
+      "reviews/lsp/hosted-lsp.md#spec-09"
+    ],
+    "LSP-037": [
+      "reviews/lsp/hosted-lsp.md#spec-09"
+    ],
+    "LSP-038": [
+      "reviews/lsp/hosted-lsp.md#spec-09"
+    ],
+    "LSP-039": [
+      "reviews/lsp/hosted-lsp.md#spec-10"
+    ],
+    "LSP-040": [
+      "reviews/lsp/hosted-lsp.md#spec-10"
+    ],
+    "LSP-041": [
+      "reviews/lsp/hosted-lsp.md#spec-10"
+    ],
+    "LSP-042": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-043": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-044": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-045": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-046": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-047": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-048": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ],
+    "LSP-049": [
+      "reviews/lsp/hosted-lsp.md#spec-02"
+    ],
+    "LSP-050": [
+      "reviews/lsp/hosted-lsp.md#spec-04"
+    ],
+    "LSP-051": [
+      "reviews/lsp/hosted-lsp.md#spec-11"
+    ]
+  },
+  "design_fingerprint": "d7f2d0aa6388ac09c75e8277db631c835199fe358c8070056c79b76f7fde4695",
+  "errors": [
+    "orphan_mappings: ['PMP-01', 'PMP-02', 'PMP-03', 'PMP-04', 'PMP-05', 'SETTLE-01']"
+  ],
+  "needs_decision": [
+    "reviews/lsp/hosted-lsp.md#SPEC-01: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-02: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-03: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-04: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-05: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-06: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-07: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-08: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-09: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-10: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md#SPEC-11: expected behavior requires human decision",
+    "reviews/lsp/hosted-lsp.md: - [pending] 精确崩溃点/毫秒级截止竞态 — 黑盒无法保证在持久提交与 continuation 之间击杀；只承诺可观测 pending 状态进程重启，内部钩子测试另行评估。",
+    "reviews/lsp/hosted-lsp.md: - [pending] UDT 外部 signer 链上完整结算 — 当前 checked agent 链适配器仅支持 plain CKB；本轮外部签名资金路径不宣称 UDT 覆盖。",
+    "reviews/lsp/hosted-lsp.md: - [unanalysed] 全分支其余 524-file diff、CCH/Lightning、WASM、迁移兼容和生产规模压测 — 超出本份 Hosted LSP devnet 行为设计。"
+  ]
+}

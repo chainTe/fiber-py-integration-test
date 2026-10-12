@@ -199,3 +199,8 @@ clean:
 
 docs:
 	python -m pytest --docs=docs/soft.md --doc-type=md test_cases/soft_fork
+
+# Isolated Hosted LSP suite. See test_cases/fiber/devnet/lsp/README.md.
+.PHONY: lsp_test
+lsp_test:
+	python -m pytest -o addopts= -vv --tb=short --junitxml=reports/hosted-lsp/junit.xml test_cases/fiber/devnet/lsp

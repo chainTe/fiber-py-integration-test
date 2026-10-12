@@ -1,0 +1,42 @@
+{
+  "schema_version": "2.0",
+  "scope": "hosted-lsp",
+  "input_fingerprint": "5789735d65075fb73ce2e50177d078d5d8ec734d753c2405e796b52bea10cfd5",
+  "responses": [
+    {
+      "finding_id": "F-01",
+      "disposition": "accepted",
+      "response": "Accepted. SPEC06/07 now explicitly use operator-opened internal-signer hosted channels for baseline021..032. External outbound033 preserves payer-only knowledge and potential red result.038 uses inbound hold invoice with receiver-owned legitimate preimage."
+    },
+    {
+      "finding_id": "F-02",
+      "disposition": "accepted",
+      "response": "Accepted.047 explicitly releases to Watchtower with SDK recovery evidence while funding remains live, then force-closes/mines. No fake chain evidence."
+    },
+    {
+      "finding_id": "F-03",
+      "disposition": "accepted",
+      "response": "Accepted. Added050 for genuine opening-response mutation before production SDK validation, no binding/funding submission, followed by genuine same-intent retry. SDK adapter supports response_patch."
+    },
+    {
+      "finding_id": "F-04",
+      "disposition": "accepted",
+      "response": "Accepted. Added051 for malicious payout/fee/sponsor inputs and prepare→real input spent→confirm chain revalidation. Separate fixtures prevent incorrectly expecting spent input to revive. Adapter owns production chain-verifier path."
+    },
+    {
+      "finding_id": "F-05",
+      "disposition": "accepted",
+      "response": "Accepted. Added049 valid Biscuit attenuation without signing-key access; original owner success and other/host namespace denial controls. SDK adapter adds attenuation operation."
+    },
+    {
+      "finding_id": "F-06",
+      "disposition": "accepted",
+      "response": "Accepted with narrower precise scope.011 now covers observable unfinished delivery and active hold TLC, no unsupported busy-opening assertion.037 explicitly covers unsigned-funding-returned idle opening signature checkpoint."
+    },
+    {
+      "finding_id": "F-07",
+      "disposition": "accepted",
+      "response": "Accepted with explicit observation boundary.025 first requires Deferred, independently computes minimum from observed upstream expiry and configured deltas, verifies intended winning term. Short invoice branch waits terminal failure; long safety branch validates computed safety bound then safely reactivates (does not falsely claim hours-long wait).026 requires InFlight before crossing short buffer while other windows remain valid."
+    }
+  ]
+}

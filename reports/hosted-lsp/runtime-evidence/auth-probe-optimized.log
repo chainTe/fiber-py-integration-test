@@ -1,0 +1,9 @@
+PASS 100 normal authorizations: exact_limit_ms=10 max_authorize_us=28
+PASS authority tenant query with exact 10 ms limit
+PASS unrelated permission: denied by policy
+PASS write permission does not grant read: denied by policy
+PASS unsatisfied attenuation check: denied by policy
+PASS appended block cannot grant authority permission: denied by policy
+PASS wrong-root signature rejected
+PASS malformed token rejected
+PASS source-based auth probe; debug_assertions=true

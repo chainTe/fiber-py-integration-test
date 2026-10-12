@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="35.581" timestamp="2026-10-12T10:51:06.185271" hostname="a5428ddcd207"><testcase classname="test_cases.fiber.devnet.lsp.test_watchtower" name="test_sdk_rejects_hostile_watchtower_transaction_before_signing[fee]" time="35.411" /></testsuite></testsuites>

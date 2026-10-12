@@ -1,0 +1,39 @@
+{
+  "scope": "hosted-lsp",
+  "status": "needs_decision",
+  "source_fingerprint": "b5e62d74770939ad5a75644e58508160ca1ad4992326444579221a9b4c3de724",
+  "evidence_kind": "descriptive evidence disposition, not a pr_workflow.py acceptance receipt",
+  "mapping": {
+    "selected_cases": 51,
+    "mapped": 51,
+    "scoped_gate_exit": 0,
+    "unchanged_global_orphans": [
+      "PMP-01",
+      "PMP-02",
+      "PMP-03",
+      "PMP-04",
+      "PMP-05",
+      "SETTLE-01"
+    ]
+  },
+  "source_review": {
+    "coverage": "51 covered, 0 partial/missing/uncertain",
+    "validity": "current",
+    "isolation": "isolation_unverified"
+  },
+  "native_execution": {
+    "passed": 69,
+    "failed": 3,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 1,
+    "credit_level": "suite and exact pytest selector only"
+  },
+  "reasons": [
+    "Two strict product invariants failed; observed Watchtower stale-request starvation is timing/request-order dependent and has separate chain/store proof.",
+    "Review isolation has no trusted host attestation.",
+    "Native pytest output is not a controlled-framework per-case acceptance receipt."
+  ],
+  "product_merge_or_release_approved": false,
+  "g1_procedure": "Task-specific user waiver, not individual row approval."
+}

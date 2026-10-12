@@ -1,0 +1,24 @@
+Command (from tools/lsp-sdk-driver): cargo +1.95.0 test --locked --offline --manifest-path Cargo.toml
+Started (UTC): 2026-10-12T16:15:55.735613+00:00
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling fiber-lsp-integration-sdk-driver v0.1.0 (<workspace>/fiber-py-integration-test/tools/lsp-sdk-driver)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 38.68s
+     Running unittests src/main.rs (../../../runtime/adapter-target/debug/deps/fiber_lsp_integration_sdk_driver-d6005669da0b3e2c)
+
+running 8 tests
+test chain::tests::lineage_accepts_legacy_and_full_hash_with_invariant_features ... ok
+test chain::tests::lineage_rejects_changed_prefix_contract_and_type ... ok
+test chain::tests::lineage_rejects_lengths_unknown_or_changed_features_and_versions ... ok
+test chain::tests::lineage_template_requires_exact_known_funding_dependencies ... ok
+test tests::payer_rejects_caller_preimage_before_rpc ... ok
+test tests::registration_proof_does_not_contact_server_or_change_snapshot ... ok
+test tests::root_identity_and_complete_session_survive_reopen ... ok
+test tests::attenuation_preserves_authority_and_verifies_without_issuer_key ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+
+
+Exit code: 0

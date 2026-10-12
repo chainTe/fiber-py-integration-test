@@ -1,0 +1,22 @@
+{
+  "case_id": "LSP-033",
+  "payment_hash": "0x399a99ae530be3b98c56c081f46e25f4c8c5af252c7e74684cde4ba4f458c39b",
+  "payer_status": "Inflight",
+  "receiver_invoice_status": "Paid",
+  "payer_rpc_preimage_present": false,
+  "authorized_from_payer_rpc": false,
+  "payer_signing": "SignatureRequired",
+  "receiver_signing": "NoSignatureRequired",
+  "payer_signing_transition": "CompleteReceivedCommitment",
+  "receiver_signing_transition": null,
+  "payer_signing_request_id": "0x35f3492bafe3f18449532846f152afd82280f5d756717ceeebdccb2834b022d7",
+  "receiver_signing_request_id": null,
+  "receiver_released_preimage": true,
+  "approved_debit": 1005000,
+  "receiver_invoice_amount": 1000000,
+  "sdk_errors": [
+    "invalid signing content: commitment validation: TLC removed without a locally authorized resolution",
+    "invalid signing content: commitment validation: TLC removed without a locally authorized resolution",
+    "invalid signing content: commitment validation: TLC removed without a locally authorized resolution"
+  ]
+}

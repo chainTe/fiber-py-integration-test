@@ -1,0 +1,24 @@
+[package]
+name = "fiber-lsp-integration-sdk-driver"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+anyhow = "1.0"
+async-trait = "0.1"
+biscuit-auth = "=6.0.0"
+ckb-jsonrpc-types = "1"
+ckb-types = "1"
+clap = { version = "4.5", features = ["derive"] }
+fiber-json-types = { path = "../../../fiber-lsp/crates/fiber-json-types", features = ["conversion", "watchtower"] }
+fiber-lsp-sdk = { path = "../../../fiber-lsp/crates/fiber-lsp-sdk" }
+fiber-lsp-sdk-agent = { path = "../../../fiber-lsp/tests/fiber-lsp-sdk-agent" }
+fiber-types = { path = "../../../fiber-lsp/crates/fiber-types" }
+hex = "0.4"
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["io-std", "io-util", "macros", "rt-multi-thread"] }

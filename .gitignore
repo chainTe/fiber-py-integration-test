@@ -8,3 +8,22 @@ __pycache__
 pid.txt
 .idea
 venv
+
+# Hosted-LSP local environments and generated execution state.
+.venv/
+tools/lsp-sdk-driver/target/
+reports/hosted-lsp/product-lsp.diff
+reports/hosted-lsp/*collection.log
+reports/hosted-lsp/pytest.log
+reports/hosted-lsp/junit.xml
+.ai-test-agent/
+
+# pytest-html default output from local collection/execution.
+/report/
+
+# Raw local execution logs/JUnit remain local; sanitized reports are committed.
+reports/hosted-lsp/*.log
+reports/hosted-lsp/*.xml
+reports/hosted-lsp/local-runtime-evidence/
+reports/hosted-lsp/*.exit
+reports/hosted-lsp/*-provenance.txt

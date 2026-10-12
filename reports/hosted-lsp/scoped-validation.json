@@ -1,0 +1,16 @@
+{
+  "scope": "hosted-lsp",
+  "base_commit": "4be658da51967421be9d58543fe0d5c2888e324b",
+  "baseline_orphans_still_visible": [
+    "PMP-01",
+    "PMP-02",
+    "PMP-03",
+    "PMP-04",
+    "PMP-05",
+    "SETTLE-01"
+  ],
+  "mapping_count": 51,
+  "review_case_count": 51,
+  "semantic_review_and_execution": "separate evidence; mapping is not a pass",
+  "errors": []
+}

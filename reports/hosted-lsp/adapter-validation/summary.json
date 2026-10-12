@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "check": "fmt",
+      "command": [
+        "cargo",
+        "+1.95.0",
+        "fmt",
+        "--manifest-path",
+        "Cargo.toml",
+        "--",
+        "--check"
+      ],
+      "started_utc": "2026-10-12T16:15:46.529903+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/fmt.log"
+    },
+    {
+      "check": "clippy",
+      "command": [
+        "cargo",
+        "+1.95.0",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--all-targets",
+        "--no-deps",
+        "--manifest-path",
+        "Cargo.toml",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "started_utc": "2026-10-12T16:15:47.657447+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/clippy.log"
+    },
+    {
+      "check": "unit",
+      "command": [
+        "cargo",
+        "+1.95.0",
+        "test",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "Cargo.toml"
+      ],
+      "started_utc": "2026-10-12T16:15:55.735613+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/unit.log"
+    },
+    {
+      "check": "build",
+      "command": [
+        "bash",
+        "build.sh",
+        "--offline"
+      ],
+      "started_utc": "2026-10-12T16:16:35.124462+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/build.log"
+    },
+    {
+      "check": "jsonl",
+      "command": [
+        "python3",
+        "check_jsonl.py",
+        "--binary",
+        "../../../runtime/adapter-target/debug/fiber-lsp-integration-sdk-driver"
+      ],
+      "started_utc": "2026-10-12T16:17:07.168481+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/jsonl.log"
+    },
+    {
+      "check": "python-format",
+      "command": [
+        "../../.venv/bin/python",
+        "-m",
+        "black",
+        "--check",
+        "check_jsonl.py"
+      ],
+      "started_utc": "2026-10-12T16:17:10.597913+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/python-format.log"
+    },
+    {
+      "check": "sdk-features",
+      "command": [
+        "cargo",
+        "+1.95.0",
+        "tree",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "Cargo.toml",
+        "-e",
+        "features",
+        "-i",
+        "fiber-lsp-sdk"
+      ],
+      "started_utc": "2026-10-12T16:17:11.601336+00:00",
+      "exit_code": 0,
+      "log": "adapter-validation/sdk-features.log"
+    }
+  ],
+  "binary_sha256": "ccc1e1504bb36f11a0a5f1595a9882b05389cbe066550d72a9ae92e880fccdf1",
+  "product_sha": "8db6a1175cc94b6f9386953fbd3e3ebbed2ff3f8",
+  "product_tracked_diff_exit": 0
+}

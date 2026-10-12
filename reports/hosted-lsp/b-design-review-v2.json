@@ -1,0 +1,319 @@
+{
+  "schema_version": "2.0",
+  "scope": "hosted-lsp",
+  "input_fingerprint": "7f5aea82139cc99838f9839c5bea43d86a2398c78a54bc1839207d3198bd833a",
+  "reviewer": {
+    "session": "independent-design-review-targeted-revision",
+    "model": "unavailable (not attested)",
+    "isolation": "isolation_unverified"
+  },
+  "acknowledgements": [
+    {
+      "case_id": "LSP-001",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-002",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-003",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-004",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-005",
+      "spec_refs": [
+        "SPEC-01"
+      ]
+    },
+    {
+      "case_id": "LSP-006",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-007",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-008",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-009",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-010",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-011",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-012",
+      "spec_refs": [
+        "SPEC-03"
+      ]
+    },
+    {
+      "case_id": "LSP-013",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-014",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-015",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-016",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-017",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-018",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-019",
+      "spec_refs": [
+        "SPEC-05"
+      ]
+    },
+    {
+      "case_id": "LSP-020",
+      "spec_refs": [
+        "SPEC-05"
+      ]
+    },
+    {
+      "case_id": "LSP-021",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-022",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-023",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-024",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-025",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-026",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-027",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-028",
+      "spec_refs": [
+        "SPEC-06"
+      ]
+    },
+    {
+      "case_id": "LSP-029",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-030",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-031",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-032",
+      "spec_refs": [
+        "SPEC-07"
+      ]
+    },
+    {
+      "case_id": "LSP-033",
+      "spec_refs": [
+        "SPEC-08"
+      ]
+    },
+    {
+      "case_id": "LSP-034",
+      "spec_refs": [
+        "SPEC-08"
+      ]
+    },
+    {
+      "case_id": "LSP-035",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-036",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-037",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-038",
+      "spec_refs": [
+        "SPEC-09"
+      ]
+    },
+    {
+      "case_id": "LSP-039",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-040",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-041",
+      "spec_refs": [
+        "SPEC-10"
+      ]
+    },
+    {
+      "case_id": "LSP-042",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-043",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-044",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-045",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-046",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-047",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-048",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    },
+    {
+      "case_id": "LSP-049",
+      "spec_refs": [
+        "SPEC-02"
+      ]
+    },
+    {
+      "case_id": "LSP-050",
+      "spec_refs": [
+        "SPEC-04"
+      ]
+    },
+    {
+      "case_id": "LSP-051",
+      "spec_refs": [
+        "SPEC-11"
+      ]
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,5 @@
+Command (from tools/lsp-sdk-driver): cargo +1.95.0 fmt --manifest-path Cargo.toml -- --check
+Started (UTC): 2026-10-12T16:15:46.529903+00:00
+
+
+Exit code: 0

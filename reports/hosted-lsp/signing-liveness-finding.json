@@ -1,0 +1,54 @@
+{
+  "case_id": "LSP-033",
+  "product_sha": "8db6a1175cc94b6f9386953fbd3e3ebbed2ff3f8",
+  "command": ".venv/bin/python -m pytest test_cases/fiber/devnet/lsp/test_signing.py::test_external_hosted_payer_obtains_fulfillment_only_from_own_rpc -vv -s -o addopts='' --basetemp=../runtime/test-runs/signing-liveness-20261012-1622 --junitxml=reports/hosted-lsp/signing-liveness.xml",
+  "exit_code": 1,
+  "elapsed_seconds": 145.19,
+  "observation_window_seconds": 90,
+  "verified_observations": {
+    "payer_status": "Inflight",
+    "authorized_from_payer_rpc": false,
+    "payer_preimage_available": false,
+    "sdk_error": "invalid signing content: commitment validation: TLC removed without a locally authorized resolution",
+    "authorization_timeout_in_log": false,
+    "first_hop_amount": 1005000,
+    "receiver_hop_amount": 1000000
+  },
+  "not_retained_in_first_failure_output": {
+    "receiver_invoice_status": null,
+    "payer_signing_transition": null,
+    "receiver_signing_transition": null
+  },
+  "limitations": [
+    "Pytest truncated the original nested assertion; do not report receiver Paid or precise paired signing transitions as directly observed until the final serial run records lsp-033-observation.json.",
+    "FNN log contains HoldTlcTimeout-labelled rejections; that label also covers duplicate Paid/Received invoice processing, so it is not alone proof of actual expiry."
+  ],
+  "source_backed_diagnosis": [
+    {
+      "source": "crates/fiber-lib/src/fiber/payment.rs:635-643",
+      "fact": "SendPaymentResponse exposes preimages only from successful attempts."
+    },
+    {
+      "source": "crates/fiber-lib/src/fiber/payment.rs:1937-1948",
+      "fact": "The payment attempt stores its fulfillment preimage while marking the attempt successful after processing removal."
+    },
+    {
+      "source": "crates/fiber-lsp-sdk/src/commitment.rs:284-299,504-523",
+      "fact": "The SDK requires a valid preimage for local Fulfill authorization and rejects removal while its local payment resolution remains Pending."
+    },
+    {
+      "source": "crates/fiber-lib/src/fiber/settle_tlc_set_command.rs:252-275",
+      "fact": "HoldTlcTimeout is also returned for certain Received and Paid status combinations, independently of the wall-clock hold limit."
+    }
+  ],
+  "interpretation": "Reproduced payer-side external-signing liveness failure consistent with a preimage/commitment-resolution circular dependency; exact receiver paired terminal state is not yet proven by retained output.",
+  "guardrails": [
+    "No receiver preimage passed to payer. Payer driver outbound_fulfillment accepts no preimage argument and queries only its own get_payment.",
+    "No product edits, skips, xfails, state injection, or liveness timeout extensions."
+  ],
+  "evidence": [
+    "reports/hosted-lsp/signing-liveness.log",
+    "reports/hosted-lsp/signing-liveness.xml"
+  ],
+  "next_validation": "Final low-contention serial run records token-, key-, and preimage-free paired outcome and signing-transition JSON before asserting."
+}

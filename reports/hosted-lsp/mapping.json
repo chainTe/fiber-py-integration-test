@@ -1,0 +1,434 @@
+{
+  "automated": [
+    "LSP-001",
+    "LSP-002",
+    "LSP-003",
+    "LSP-004",
+    "LSP-005",
+    "LSP-006",
+    "LSP-007",
+    "LSP-008",
+    "LSP-009",
+    "LSP-010",
+    "LSP-011",
+    "LSP-012",
+    "LSP-013",
+    "LSP-014",
+    "LSP-015",
+    "LSP-016",
+    "LSP-017",
+    "LSP-018",
+    "LSP-019",
+    "LSP-020",
+    "LSP-021",
+    "LSP-022",
+    "LSP-023",
+    "LSP-024",
+    "LSP-025",
+    "LSP-026",
+    "LSP-027",
+    "LSP-028",
+    "LSP-029",
+    "LSP-030",
+    "LSP-031",
+    "LSP-032",
+    "LSP-033",
+    "LSP-034",
+    "LSP-035",
+    "LSP-036",
+    "LSP-037",
+    "LSP-038",
+    "LSP-039",
+    "LSP-040",
+    "LSP-041",
+    "LSP-042",
+    "LSP-043",
+    "LSP-044",
+    "LSP-045",
+    "LSP-046",
+    "LSP-047",
+    "LSP-048",
+    "LSP-049",
+    "LSP-050",
+    "LSP-051"
+  ],
+  "automated_case_count": 51,
+  "automation_coverage": "51/51",
+  "automation_marker_mismatches": {},
+  "duplicate_review_ids": {},
+  "mapping_locations": {
+    "LSP-001": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:48"
+    ],
+    "LSP-002": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:67"
+    ],
+    "LSP-003": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:87"
+    ],
+    "LSP-004": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:113"
+    ],
+    "LSP-005": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:144"
+    ],
+    "LSP-006": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:164"
+    ],
+    "LSP-007": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:342",
+      "test_cases/fiber/devnet/lsp/test_payments.py:432",
+      "test_cases/fiber/devnet/lsp/test_registry.py:200",
+      "test_cases/fiber/devnet/lsp/test_signing.py:225"
+    ],
+    "LSP-008": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:433",
+      "test_cases/fiber/devnet/lsp/test_payments.py:883",
+      "test_cases/fiber/devnet/lsp/test_registry.py:201"
+    ],
+    "LSP-009": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:264"
+    ],
+    "LSP-010": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:290"
+    ],
+    "LSP-011": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:192",
+      "test_cases/fiber/devnet/lsp/test_payments.py:341",
+      "test_cases/fiber/devnet/lsp/test_payments.py:848"
+    ],
+    "LSP-012": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:307"
+    ],
+    "LSP-013": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:122"
+    ],
+    "LSP-014": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:151"
+    ],
+    "LSP-015": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:123"
+    ],
+    "LSP-016": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:124"
+    ],
+    "LSP-017": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:177"
+    ],
+    "LSP-018": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:190"
+    ],
+    "LSP-019": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:129"
+    ],
+    "LSP-020": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:150"
+    ],
+    "LSP-021": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:172"
+    ],
+    "LSP-022": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:191"
+    ],
+    "LSP-023": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:225"
+    ],
+    "LSP-024": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:271"
+    ],
+    "LSP-025": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:666"
+    ],
+    "LSP-026": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:340"
+    ],
+    "LSP-027": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:391"
+    ],
+    "LSP-028": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:740"
+    ],
+    "LSP-029": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:431"
+    ],
+    "LSP-030": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:469"
+    ],
+    "LSP-031": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:548"
+    ],
+    "LSP-032": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:593"
+    ],
+    "LSP-033": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:698"
+    ],
+    "LSP-034": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:634"
+    ],
+    "LSP-035": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:226"
+    ],
+    "LSP-036": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:227"
+    ],
+    "LSP-037": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:288"
+    ],
+    "LSP-038": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:310"
+    ],
+    "LSP-039": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:454"
+    ],
+    "LSP-040": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:618",
+      "test_cases/fiber/devnet/lsp/test_signing.py:668"
+    ],
+    "LSP-041": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:356"
+    ],
+    "LSP-042": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:384"
+    ],
+    "LSP-043": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:370"
+    ],
+    "LSP-044": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:387"
+    ],
+    "LSP-045": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:433"
+    ],
+    "LSP-046": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:492"
+    ],
+    "LSP-047": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:573"
+    ],
+    "LSP-048": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:603"
+    ],
+    "LSP-049": [
+      "test_cases/fiber/devnet/lsp/test_registry.py:323"
+    ],
+    "LSP-050": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:826"
+    ],
+    "LSP-051": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:696",
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:757"
+    ],
+    "PMP-01": [
+      "test_cases/fiber/devnet/connect_peer/test_peer_message_policy.py:312"
+    ],
+    "PMP-02": [
+      "test_cases/fiber/devnet/connect_peer/test_peer_message_policy.py:346"
+    ],
+    "PMP-03": [
+      "test_cases/fiber/devnet/connect_peer/test_peer_message_policy.py:372"
+    ],
+    "PMP-04": [
+      "test_cases/fiber/devnet/connect_peer/test_peer_message_policy.py:396"
+    ],
+    "PMP-05": [
+      "test_cases/fiber/devnet/connect_peer/test_peer_message_policy.py:421"
+    ],
+    "SETTLE-01": [
+      "test_cases/fiber/devnet/security/test_stale_commitment_raa_pending_tlc_stuck.py:119"
+    ]
+  },
+  "missing_automation_markers": {},
+  "multiple_code_mappings": {
+    "LSP-007": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:342",
+      "test_cases/fiber/devnet/lsp/test_payments.py:432",
+      "test_cases/fiber/devnet/lsp/test_registry.py:200",
+      "test_cases/fiber/devnet/lsp/test_signing.py:225"
+    ],
+    "LSP-008": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:433",
+      "test_cases/fiber/devnet/lsp/test_payments.py:883",
+      "test_cases/fiber/devnet/lsp/test_registry.py:201"
+    ],
+    "LSP-011": [
+      "test_cases/fiber/devnet/lsp/test_payments.py:192",
+      "test_cases/fiber/devnet/lsp/test_payments.py:341",
+      "test_cases/fiber/devnet/lsp/test_payments.py:848"
+    ],
+    "LSP-040": [
+      "test_cases/fiber/devnet/lsp/test_signing.py:618",
+      "test_cases/fiber/devnet/lsp/test_signing.py:668"
+    ],
+    "LSP-051": [
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:696",
+      "test_cases/fiber/devnet/lsp/test_watchtower.py:757"
+    ]
+  },
+  "orphan_mappings": [
+    "PMP-01",
+    "PMP-02",
+    "PMP-03",
+    "PMP-04",
+    "PMP-05",
+    "SETTLE-01"
+  ],
+  "review_case_count": 51,
+  "review_locations": {
+    "LSP-001": [
+      "reviews/lsp/hosted-lsp.md:190"
+    ],
+    "LSP-002": [
+      "reviews/lsp/hosted-lsp.md:191"
+    ],
+    "LSP-003": [
+      "reviews/lsp/hosted-lsp.md:192"
+    ],
+    "LSP-004": [
+      "reviews/lsp/hosted-lsp.md:193"
+    ],
+    "LSP-005": [
+      "reviews/lsp/hosted-lsp.md:194"
+    ],
+    "LSP-006": [
+      "reviews/lsp/hosted-lsp.md:195"
+    ],
+    "LSP-007": [
+      "reviews/lsp/hosted-lsp.md:196"
+    ],
+    "LSP-008": [
+      "reviews/lsp/hosted-lsp.md:197"
+    ],
+    "LSP-009": [
+      "reviews/lsp/hosted-lsp.md:198"
+    ],
+    "LSP-010": [
+      "reviews/lsp/hosted-lsp.md:199"
+    ],
+    "LSP-011": [
+      "reviews/lsp/hosted-lsp.md:200"
+    ],
+    "LSP-012": [
+      "reviews/lsp/hosted-lsp.md:201"
+    ],
+    "LSP-013": [
+      "reviews/lsp/hosted-lsp.md:202"
+    ],
+    "LSP-014": [
+      "reviews/lsp/hosted-lsp.md:203"
+    ],
+    "LSP-015": [
+      "reviews/lsp/hosted-lsp.md:204"
+    ],
+    "LSP-016": [
+      "reviews/lsp/hosted-lsp.md:205"
+    ],
+    "LSP-017": [
+      "reviews/lsp/hosted-lsp.md:206"
+    ],
+    "LSP-018": [
+      "reviews/lsp/hosted-lsp.md:207"
+    ],
+    "LSP-019": [
+      "reviews/lsp/hosted-lsp.md:208"
+    ],
+    "LSP-020": [
+      "reviews/lsp/hosted-lsp.md:209"
+    ],
+    "LSP-021": [
+      "reviews/lsp/hosted-lsp.md:210"
+    ],
+    "LSP-022": [
+      "reviews/lsp/hosted-lsp.md:211"
+    ],
+    "LSP-023": [
+      "reviews/lsp/hosted-lsp.md:212"
+    ],
+    "LSP-024": [
+      "reviews/lsp/hosted-lsp.md:213"
+    ],
+    "LSP-025": [
+      "reviews/lsp/hosted-lsp.md:214"
+    ],
+    "LSP-026": [
+      "reviews/lsp/hosted-lsp.md:215"
+    ],
+    "LSP-027": [
+      "reviews/lsp/hosted-lsp.md:216"
+    ],
+    "LSP-028": [
+      "reviews/lsp/hosted-lsp.md:217"
+    ],
+    "LSP-029": [
+      "reviews/lsp/hosted-lsp.md:218"
+    ],
+    "LSP-030": [
+      "reviews/lsp/hosted-lsp.md:219"
+    ],
+    "LSP-031": [
+      "reviews/lsp/hosted-lsp.md:220"
+    ],
+    "LSP-032": [
+      "reviews/lsp/hosted-lsp.md:221"
+    ],
+    "LSP-033": [
+      "reviews/lsp/hosted-lsp.md:222"
+    ],
+    "LSP-034": [
+      "reviews/lsp/hosted-lsp.md:223"
+    ],
+    "LSP-035": [
+      "reviews/lsp/hosted-lsp.md:224"
+    ],
+    "LSP-036": [
+      "reviews/lsp/hosted-lsp.md:225"
+    ],
+    "LSP-037": [
+      "reviews/lsp/hosted-lsp.md:226"
+    ],
+    "LSP-038": [
+      "reviews/lsp/hosted-lsp.md:227"
+    ],
+    "LSP-039": [
+      "reviews/lsp/hosted-lsp.md:228"
+    ],
+    "LSP-040": [
+      "reviews/lsp/hosted-lsp.md:229"
+    ],
+    "LSP-041": [
+      "reviews/lsp/hosted-lsp.md:230"
+    ],
+    "LSP-042": [
+      "reviews/lsp/hosted-lsp.md:231"
+    ],
+    "LSP-043": [
+      "reviews/lsp/hosted-lsp.md:232"
+    ],
+    "LSP-044": [
+      "reviews/lsp/hosted-lsp.md:233"
+    ],
+    "LSP-045": [
+      "reviews/lsp/hosted-lsp.md:234"
+    ],
+    "LSP-046": [
+      "reviews/lsp/hosted-lsp.md:235"
+    ],
+    "LSP-047": [
+      "reviews/lsp/hosted-lsp.md:236"
+    ],
+    "LSP-048": [
+      "reviews/lsp/hosted-lsp.md:237"
+    ],
+    "LSP-049": [
+      "reviews/lsp/hosted-lsp.md:238"
+    ],
+    "LSP-050": [
+      "reviews/lsp/hosted-lsp.md:239"
+    ],
+    "LSP-051": [
+      "reviews/lsp/hosted-lsp.md:240"
+    ]
+  },
+  "root": "/workspace/scratch/37ce08fe98f0/fiber-lsp-integration-work/fiber-py-integration-test",
+  "unautomated": []
+}

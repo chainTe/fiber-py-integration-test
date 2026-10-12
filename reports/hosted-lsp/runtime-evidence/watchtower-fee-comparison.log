@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-7.3.2, pluggy-1.6.0 -- /workspace/scratch/37ce08fe98f0/fiber-lsp-integration-work/fiber-py-integration-test/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.14', 'Platform': 'Linux-6.18.44-x86_64-with-glibc2.41', 'Packages': {'pytest': '7.3.2', 'pluggy': '1.6.0'}, 'Plugins': {'docs': '0.1.0', 'html': '3.2.0', 'metadata': '3.1.1', 'platformdirs': '4.13.0'}}
+rootdir: /workspace/scratch/37ce08fe98f0/fiber-lsp-integration-work/fiber-py-integration-test
+configfile: pytest.ini
+plugins: docs-0.1.0, html-3.2.0, metadata-3.1.1, platformdirs-4.13.0
+collecting ... collected 1 item
+
+test_cases/fiber/devnet/lsp/test_watchtower.py::test_sdk_rejects_hostile_watchtower_transaction_before_signing[fee] PASSED
+
+- generated xml file: /workspace/scratch/37ce08fe98f0/fiber-lsp-integration-work/fiber-py-integration-test/reports/hosted-lsp/local-runtime-evidence/watchtower-fee-final-comparison.xml -
+============================== 1 passed in 36.13s ==============================

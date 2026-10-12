@@ -1,0 +1,14 @@
+Command (from tools/lsp-sdk-driver): cargo +1.95.0 tree --locked --offline --manifest-path Cargo.toml -e features -i fiber-lsp-sdk
+Started (UTC): 2026-10-12T16:17:11.601336+00:00
+fiber-lsp-sdk v0.1.0 (<workspace>/fiber-lsp/crates/fiber-lsp-sdk)
+├── fiber-lsp-sdk feature "default"
+│   ├── fiber-lsp-integration-sdk-driver v0.1.0 (<workspace>/fiber-py-integration-test/tools/lsp-sdk-driver)
+│   │   └── fiber-lsp-integration-sdk-driver feature "default" (command-line)
+│   └── fiber-lsp-sdk-agent v0.1.0 (<workspace>/fiber-lsp/tests/fiber-lsp-sdk-agent)
+│       └── fiber-lsp-sdk-agent feature "default"
+│           └── fiber-lsp-integration-sdk-driver v0.1.0 (<workspace>/fiber-py-integration-test/tools/lsp-sdk-driver) (*)
+└── fiber-lsp-sdk feature "json"
+    └── fiber-lsp-sdk feature "default" (*)
+
+
+Exit code: 0
